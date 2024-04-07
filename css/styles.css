@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  outline: none;
 }
 /* Color variables */
 :root {
@@ -35,15 +36,30 @@
   --footer-hover-icons: #31d0aa;
   --close-button-border: #4b494a3b;
   --transitions: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --font-family-roboto: "Roboto", normal, sans-serif;
+  --font-family-raleway: "Raleway", bold, sans-serif ;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-roboto);
 }
 /* Header */
 .logo::before {
   content: "web";
   color: var(--logo-before);
+  font-family:var(--font-family-raleway);
+  font-weight: 700;
 }
 .logo::after {
   content: "studio";
   color: var(--logo-after);
+  font-family:var(--font-family-raleway);
+  font-weight: 700;
 }
 .logo {
   display: flex;
@@ -63,6 +79,8 @@
   text-decoration: none;
 }
 .nav {
+  font-family: var(--font-family-roboto);
+  font-weight: 500;
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
@@ -72,7 +90,6 @@
 .nav:focus,
 .nav:hover {
   text-underline-offset: 20px;
-  margin-bottom: 0;
 }
 .header-links a:hover,
 .header-links a:focus {
@@ -143,12 +160,20 @@ ul {
   z-index: 0;
 }
 .hero-title {
+  display: flex;
+  margin: auto;
+  margin-bottom: 24px;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
   color: var(--hero-title);
   letter-spacing: 0.02em;
   font-size: 56px;
   z-index: 1;
 }
 .order-button {
+  margin: auto;
+  margin-top: 24px;
   background-color: var(--order-button-background-color);
   color: var(--hero-title);
   display: flex;
@@ -203,7 +228,6 @@ ul {
   position: absolute;
   top: 24px;
   right: 24px;
-  outline: none;
   border: 1px solid var(--close-button-border);
   transition: transform var(--transitions);
 }
@@ -356,6 +380,8 @@ svg.icon:active {
 .logo-footer::after {
   content: "studio";
   color: var(--logo-footer-after);
+  font-family: var(--font-family-raleway);
+  font-weight: 700;
 }
 .logo-footer{
   display: flex;
@@ -405,6 +431,7 @@ svg.icon:active {
   margin: auto;
 }
 .imput-email{
+  font-family: var(--font-family-roboto);
   display: flex;
   margin: auto;
   background-color: var(--footer-background);
@@ -413,16 +440,17 @@ svg.icon:active {
   border-color: #fff;
   color: var(--footer-text);
 }
-.imput-email:valid
-{
-color: var(--logo-footer-after);
+.imput-email::placeholder{
+  color: var(--footer-text);
+  display: flex;
+  padding-left: 16px;
+  margin: auto;
 }
 .subscribe-label{
   display: flex;
   margin: auto;
   margin-top: 50px;
   flex-direction: column;
-  color: var(--footer-text);
 }
 .button-footer{
   display: flex;
@@ -439,11 +467,15 @@ color: var(--logo-footer-after);
   align-items: center;
   padding: 20px;
 }
-.button-footer:hover{
+.button-footer:hover,
+.button-footer:focus
+{
   background-color: var(--button-hover-focus);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-[class^="icon-Frame-3"], [class*="icon-Frame-3"] {
+[class^="icon-Frame-3"],
+[class*="icon-Frame-3"] 
+{
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -461,6 +493,7 @@ color: var(--logo-footer-after);
   margin-top: 76px;
 }
 .button {
+  font-family: var(--font-family-roboto);
   background-color: var(--filter-button-background);
   color: var(--filter-button-text);
   padding-top: 12px;
@@ -488,6 +521,9 @@ color: var(--logo-footer-after);
   justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
+}
+.card-trei{
+margin-bottom: 120px;
 }
 .portofolio-list:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
