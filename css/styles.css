@@ -285,6 +285,7 @@ ul {
 .form-phone,
 .form-email,
 .form-conditions,
+.form-comment,
 .form-comment::placeholder {
   color: var(--light-slate);
 }
