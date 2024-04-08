@@ -51,8 +51,45 @@
             <div class="modal is-hidden" data-modal>
                 <div class="modal-content">
                     <button class="close-btn" data-modal-close>&times;</button>
+                    <h2 class="h2-modal">Leave your contacts and we will call you back</h2>
+                    <form class="form-container" action="/submit_form" method="post">
+                        <div class="form-elements">
+                            <label class="form-name" for="name">Name</label>
+                            <svg class="icon-person">
+                                <use href="./images/icons.svg#icon-person-black">
+                                </use>
+                            </svg>
+                            <input class="form-name-imput" type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-elements">
+                            <label class="form-phone" for="phone">Phone</label>
+                            <svg class="icon-phone">
+                                <use href="./images/icons.svg#icon-phone-black">
+                                </use>
+                            </svg>
+                            <input class="form-phone-imput" type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-elements">
+                            <label class="form-email" for="email">Email</label>
+                            <svg class="icon-email">
+                                <use href="./images/icons.svg#icon-email-black">
+                                </use>
+                            </svg>
+                            <input class="form-email-imput" type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-elements">
+                            <label class="form-comment" for="comment">Comment</label>
+                            <textarea class="from-comment-imput" id="comment" name="comment" rows="5"
+                                placeholder="Text imput" required></textarea>
+                        </div>
+                        <div class="form-conditions form-elements">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I accept the terms and conditions of the<a href="url">Privacy
+                                    Policy</a></label>
+                        </div>
+                        <input type="submit" value="Submit">
+                    </form>
                 </div>
-            </div>
         </section>
         <!-- Our-goals-section-->
         <section class="container">
@@ -344,18 +381,18 @@
                     </div>
                 </div>
             </div>
-                <form class="Subscribe-footer">
-                    <label class="subscribe-label">
-                        <h4>Subscribe</h4>
-                        <input class="imput-email" type="email" name="email" required placeholder="E-mail" />
-                    </label>
-                    <button class="button-footer" type="submit"> Subscribe  
-                        <svg class="icon-Frame-3">
-                            <use href="./images/icons.svg#icon-Frame-3">
-                            </use>
-                        </svg>
-                    </button>
-                </form>
+            <form class="Subscribe-footer">
+                <label class="subscribe-label">
+                    <h4>Subscribe</h4>
+                    <input class="imput-email" type="email" name="email" required placeholder="E-mail" />
+                </label>
+                <button class="button-footer" type="submit"> Subscribe
+                    <svg class="icon-Frame-3">
+                        <use href="./images/icons.svg#icon-Frame-3">
+                        </use>
+                    </svg>
+                </button>
+            </form>
         </footer>
     </section>
     <script src="./js/modal.js"></script>
