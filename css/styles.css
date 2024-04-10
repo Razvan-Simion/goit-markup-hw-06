@@ -318,6 +318,10 @@ ul {
   background-color: var(--header-links-focus-hover-active);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.form-elements:focus-within,
+.border-imput:focus-within {
+  color: var(--button-color-filters);
+}
 .form-name-imput,
 .form-phone-imput,
 .form-email-imput {
