@@ -322,6 +322,9 @@ ul {
 .border-imput:focus-within {
   color: var(--button-color-filters);
 }
+.from-comment-imput:focus {
+  border-color: var(--button-color-filters);
+}
 .form-name-imput,
 .form-phone-imput,
 .form-email-imput {
